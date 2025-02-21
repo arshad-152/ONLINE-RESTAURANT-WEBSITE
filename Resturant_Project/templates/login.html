@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+{% block class %}class = "sub_page" {% endblock class %}
+
+{% block status %}active{% endblock status %}
+
+{%block main%}
+
+<section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Sign up page
+        </h2>
+      </div>
+    <form method="post">
+    {%csrf_token%}
+
+    <table class="table">
+        <tr>
+            <td>Enter User Name</td>
+            <td><input type="text" name="uname" class="form-control" required /></td>
+        </tr>
+
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="password" name="pwd" class="form-control" required /></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn btn-success" value="Login">Login</button></td>
+        </tr>
+    </table>
+</form>
+<div>
+</section>
+{% endblock main%}
